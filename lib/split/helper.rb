@@ -123,7 +123,7 @@ module Split
     end
 
     def is_robot?
-      request.user_agent =~ Split.configuration.robot_regex
+      request.user_agent !~ /mozilla|opera/i
     end
 
     def is_ignored_ip_address?

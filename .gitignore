@@ -4,3 +4,6 @@ Gemfile.lock
 pkg/*
 *.rbc
 .idea
+.swp
+.swo
+bin/

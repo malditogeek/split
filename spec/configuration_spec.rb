@@ -26,12 +26,6 @@ describe Split::Configuration do
     @config.disabled?.should be_true
   end
 
-  it "should provide a default pattern for robots" do
-    %w[Baidu Gigabot Googlebot libwww-perl lwp-trivial msnbot SiteUptime Slurp WordPress ZIBB ZyBorg AdsBot-Google Wget curl bitlybot facebookexternalhit spider].each do |robot|
-      @config.robot_regex.should =~ robot
-    end
-  end
-
   it "should use the session adapter for persistence by default" do
     @config.persistence.should eq(Split::Persistence::SessionAdapter)
   end
